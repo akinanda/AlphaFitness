@@ -1,0 +1,480 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_profile"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context="com.coincide.alphafitness.ProfileActivity">
+
+    <include layout="@layout/toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/rl_head"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin">
+
+                <ImageView
+                    android:id="@+id/iv_profile"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_alignParentLeft="true"
+                    android:src="@drawable/ico_profile" />
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@+id/iv_profile"
+                    android:text="Enter Name"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/txt_size_head"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/iv_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/tv_name"
+                    android:src="@drawable/ico_edit"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_head2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl_head"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin">
+
+                <LinearLayout
+                    android:id="@+id/ll_head"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="1">
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.25"
+                        android:gravity="center"
+                        android:text="Gender:"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/txt_size_head2" />
+
+                    <TextView
+                        android:id="@+id/tv_gender"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.25"
+                        android:background="@color/colorGrey"
+                        android:gravity="center"
+                        android:text="Male"
+                        android:textSize="@dimen/txt_size_head2" />
+
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.25"
+                        android:gravity="center"
+                        android:text="Weight:"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/txt_size_head2" />
+
+                    <TextView
+                        android:id="@+id/tv_weight"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.25"
+                        android:background="@color/colorGrey"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textSize="@dimen/txt_size_head2" />
+
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.25"
+                        android:background="@color/colorGrey"
+                        android:gravity="center"
+                        android:text="lbs"
+                        android:textSize="@dimen/txt_size_head2" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/rl_avgweekly"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl_head2"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/ll_avgweekly"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorGrey"
+                    android:paddingBottom="@dimen/activity_vertical_margin"
+
+                    android:paddingTop="@dimen/activity_vertical_margin">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="30dp"
+                        android:text="Average/Weekly"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/txt_size_head4" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:paddingBottom="@dimen/activity_vertical_margin"
+                    android:paddingTop="@dimen/activity_vertical_margin"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="32dp"
+                        android:text="Distance"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/txt_size_head2"
+                        android:layout_weight="0.5"/>
+
+                    <TextView
+                        android:id="@+id/tv_avg_distance"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="32dp"
+                        android:text="0.0 km"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/txt_size_head2"
+                        android:layout_weight="0.5"
+                        android:gravity="right"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorGrey"/>
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:paddingBottom="@dimen/activity_vertical_margin"
+                    android:paddingTop="@dimen/activity_vertical_margin"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="32dp"
+                        android:text="Time"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/txt_size_head2"
+                        android:layout_weight="0.5"/>
+
+                    <TextView
+                        android:id="@+id/tv_avg_time"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="32dp"
+                        android:text="00:00.0 "
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/txt_size_head2"
+                        android:layout_weight="0.5"
+                        android:gravity="right"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorGrey"/>
+
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:paddingBottom="@dimen/activity_vertical_margin"
+                    android:paddingTop="@dimen/activity_vertical_margin"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="32dp"
+                        android:text="Workouts"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/txt_size_head2"
+                        android:layout_weight="0.5"/>
+
+                    <TextView
+                        android:id="@+id/tv_avg_workouts"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="32dp"
+                        android:text="0 times"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/txt_size_head2"
+                        android:layout_weight="0.5"
+                        android:gravity="right"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorGrey"/>
+
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:paddingBottom="@dimen/activity_vertical_margin"
+                    android:paddingTop="@dimen/activity_vertical_margin"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="32dp"
+                        android:text="Calories Burned"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/txt_size_head2"
+                        android:layout_weight="0.5"/>
+
+                    <TextView
+                        android:id="@+id/tv_avg_calories"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="32dp"
+                        android:text="0 Cal"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/txt_size_head2"
+                        android:layout_weight="0.5"
+                        android:gravity="right"/>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/alltime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl_avgweekly"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/ll_alltime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorGrey"
+                    android:paddingBottom="@dimen/activity_vertical_margin"
+
+                    android:paddingTop="@dimen/activity_vertical_margin">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="30dp"
+                        android:text="All Time"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/txt_size_head4" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:paddingBottom="@dimen/activity_vertical_margin"
+                    android:paddingTop="@dimen/activity_vertical_margin"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="32dp"
+                        android:text="Distance"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/txt_size_head2"
+                        android:layout_weight="0.5"/>
+
+                    <TextView
+                        android:id="@+id/tv_all_distance"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="32dp"
+                        android:text="0.0 km"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/txt_size_head2"
+                        android:layout_weight="0.5"
+                        android:gravity="right"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorGrey"/>
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:paddingBottom="@dimen/activity_vertical_margin"
+                    android:paddingTop="@dimen/activity_vertical_margin"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="32dp"
+                        android:text="Time"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/txt_size_head2"
+                        android:layout_weight="0.5"/>
+
+                    <TextView
+                        android:id="@+id/tv_all_time"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="32dp"
+                        android:text=" 00:00.0 "
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/txt_size_head2"
+                        android:layout_weight="0.5"
+                        android:gravity="right"/>
+
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorGrey"/>
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:paddingBottom="@dimen/activity_vertical_margin"
+                    android:paddingTop="@dimen/activity_vertical_margin"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="32dp"
+                        android:text="Workouts"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/txt_size_head2"
+                        android:layout_weight="0.5"/>
+
+                    <TextView
+                        android:id="@+id/tv_all_workouts"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="32dp"
+                        android:text="0 times"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/txt_size_head2"
+                        android:layout_weight="0.5"
+                        android:gravity="right"/>
+
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorGrey"/>
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:paddingBottom="@dimen/activity_vertical_margin"
+                    android:paddingTop="@dimen/activity_vertical_margin"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="32dp"
+                        android:text="Calories Burned"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/txt_size_head2"
+                        android:layout_weight="0.5"/>
+
+                    <TextView
+                        android:id="@+id/tv_all_calories"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="32dp"
+                        android:text="0 Cal"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/txt_size_head2"
+                        android:layout_weight="0.5"
+                        android:gravity="right"/>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>
